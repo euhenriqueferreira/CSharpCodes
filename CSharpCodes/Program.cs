@@ -24,6 +24,15 @@ namespace MyApplication
             Console.WriteLine(number);
             Console.WriteLine(number2);
             Console.WriteLine(condition);
+
+            if(name == "Henrique")
+            {
+                Console.WriteLine("Meu nome é Henrique");
+            }
+            else
+            {
+                Console.WriteLine("Meu nome não é Henrique!");
+            }
         }
     }
 }
