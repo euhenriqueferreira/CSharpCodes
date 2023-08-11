@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using System.Security.Cryptography.X509Certificates;
+using System.IO;
 
 namespace MyApplication
 {
@@ -44,6 +45,17 @@ namespace MyApplication
             Henrique.anoNascimento = 2003;
             Console.WriteLine("Idade: " + Henrique.idade());
             Console.WriteLine("Empregado: " + Henrique.empregado);
+
+            AlunoEscola Aluno1= new AlunoEscola("Joãozinho");
+
+            Console.WriteLine(Aluno1.nome);
+            Aluno1.estudar();
+
+            string textoArquivo = "Esse é o texto que será escrito dentro de meu arquivo.";
+            File.WriteAllText("texto.txt", textoArquivo);
+
+            string lerTexto = File.ReadAllText("texto.txt");
+            Console.WriteLine(lerTexto);
         }
 
     }
